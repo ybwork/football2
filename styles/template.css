@@ -67,6 +67,12 @@
 .news-content {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.news-content__poster {
+  background-size: cover;
 }
 .news-button {
   margin-top: 15px;
