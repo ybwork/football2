@@ -70,9 +70,29 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  margin-top: 20px;
 }
-.news-content__poster {
+.news-content__item {
+  width: 32.3%;
+}
+.news-content__poster-img {
   background-size: cover;
+  width: 100%;
+}
+.news-content__info {
+  padding: 35px;
+}
+.news-content__info-date {
+  color: gray;
+}
+.news-content__info-text {
+  font-weight: bold;
+}
+.news-content__info-tags {
+  margin-top: 15px;
+}
+.news-content__info-tags__link {
+  color: gray;
 }
 .news-button {
   margin-top: 15px;

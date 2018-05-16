@@ -84,13 +84,37 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    margin-top: 20px;
 
     &__item {
-
+        width: 32.3%;
     }
 
     &__poster {
-        background-size: cover;
+        &-img {
+            background-size: cover;
+            width: 100%;
+        }
+    }
+
+    &__info {
+        padding: 35px;
+
+        &-date {
+            color: gray;
+        }
+
+        &-text {
+            font-weight: bold;
+        }
+
+        &-tags {
+            margin-top: 15px;
+
+            &__link {
+                color: gray;
+            }
+        }
     }
 }
 
