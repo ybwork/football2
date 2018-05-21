@@ -98,3 +98,18 @@
   margin-top: 15px;
   text-align: center;
 }
+@media (max-width: 1600px) {
+  .container {
+    background: blue;
+  }
+}
+@media (max-width: 996px) {
+  .container {
+    background: red;
+  }
+}
+@media (max-width: 640px) {
+  .container {
+    background: green;
+  }
+}

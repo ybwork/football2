@@ -122,3 +122,43 @@
     margin-top: 15px;
     text-align: center;
 }
+
+@desktop-extra-large: ~"(min-width: 1600px)";
+
+@media @desktop-extra-large {
+    .container {
+        background: blue;
+    }
+}
+
+@tablet: ~"(max-width: 996px)";
+
+@media @tablet {
+    .container {
+        background: red;
+    }
+}
+
+@mobile: ~"(max-width: 640px)";
+
+@media @mobile {
+    .container {
+        background: green;
+    }
+}
+
+/*
+    В каком месте писать?
+
+    Что убирать для планшета, а что для телефона?
+
+    Нужно ли делать для desktop?
+
+    Как проверять широкоформатный размер?
+
+    Внури медиа-запроса должно идти переопределение уже существующий
+    стилей для классов?
+
+    Для первой величины правильно написать min-width: 1600px или 
+    max-width: 1600px?
+*/
