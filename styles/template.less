@@ -1,3 +1,9 @@
+@desktop: ~"(max-width: 1200px)";
+
+@tablet: ~"(max-width: 996px)";
+
+@mobile: ~"(max-width: 640px)";
+
 * {
     margin: 0;
     padding: 0;
@@ -23,6 +29,10 @@
     justify-content: space-between;
     align-items: center;
 
+    @media @mobile {
+        flex-direction: column-reverse;
+    }
+
     &__title {
         display: flex;
         justify-content: space-between;
@@ -43,7 +53,11 @@
         margin-left: 20px;
         padding: 3px 12px;
         border: 1px solid;
-        border-radius: 6px;  
+        border-radius: 6px;
+
+        @media @tablet {
+            display: none;
+        }
 
         &-icon {
             font-size: 12px;
@@ -62,6 +76,11 @@
         align-items: center;
 
         &-text {
+
+            @media @tablet {
+                display: none;
+            }
+
             font-size: 14px;
             font-weight: bold;
         }
@@ -86,8 +105,20 @@
     justify-content: space-between;
     margin-top: 20px;
 
+    @media @mobile {
+        flex-direction: column;
+    }
+
     &__item {
         width: 32.3%;
+
+        @media @tablet {
+            width: 47.3%;
+        }
+
+        @media @mobile {
+            width: 95.3%;
+        }
     }
 
     &__poster {
@@ -123,42 +154,34 @@
     text-align: center;
 }
 
-@desktop-extra-large: ~"(min-width: 1600px)";
-
-@media @desktop-extra-large {
-    .container {
-        background: blue;
-    }
-}
-
-@tablet: ~"(max-width: 996px)";
-
-@media @tablet {
-    .container {
-        background: red;
-    }
-}
-
-@mobile: ~"(max-width: 640px)";
-
-@media @mobile {
-    .container {
-        background: green;
-    }
-}
-
 /*
     В каком месте писать?
 
+        В блоке
+
     Что убирать для планшета, а что для телефона?
+
+        То, что не нужно. А если нужно всё, то переносить на строку ниже.
 
     Нужно ли делать для desktop?
 
+        Если основная вёрстка для широкоформатного экрана (1600), то да. В остальных случаях нет, потому что основная вёрстка и так для обычного экрана.
+
+     Что писать для 1600? 
+ 
+        Здесь в основном колоночное форматирование. Например для обычного монитора было по 4 колонки в строке, а для extra-large сделаем по 6 колонок.
+
     Как проверять широкоформатный размер?
+
+        На мониторе.
 
     Внури медиа-запроса должно идти переопределение уже существующий
     стилей для классов?
 
+        Да.
+
     Для первой величины правильно написать min-width: 1600px или 
     max-width: 1600px?
+
+        Для первой величины обычная вёрстка.
 */
